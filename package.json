@@ -1,5 +1,16 @@
 {
   "devDependencies": {
-    "sass": "^1.38.2"
-  }
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-sass": "^5.0.0"
+  },
+  "scripts": {
+    "build": "gulp build"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "not ie <= 11"
+  ]
 }

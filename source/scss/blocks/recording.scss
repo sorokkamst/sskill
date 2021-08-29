@@ -1,0 +1,41 @@
+.recording  {
+    &__header {
+        @include font(38px, 44px, 900, -0.5px);
+        text-align: center;
+        margin: 56px 0 84px 0;
+
+        @media (min-width: $tablet-width) {
+            font-size: 45px;
+            line-height: 53px;
+            margin: 50px 0 77px 0;
+        }
+
+        @media (min-width: $desktop-width) {
+            font-size: 55px;
+            line-height: 55px;
+            margin: 64px 0 61px 0;
+        }
+    }
+
+    &__position {
+        display: grid;
+        grid-template-rows: 1fr;
+
+        @media (min-width: $desktop-width) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @media (min-width: $tablet-width) {
+        &-wrapper {
+            margin: 0 30px;
+        }
+    }
+
+    @media (min-width: $desktop-width) {
+        &-wrapper {
+            max-width: 1170px;
+            margin: 0 auto;
+        }
+    }
+}

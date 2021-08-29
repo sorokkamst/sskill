@@ -1,0 +1,202 @@
+.recording-price {
+    position: relative;
+    background-color: $blue;
+    text-align: center;
+    padding: 89px 0 41px 0;
+
+    @media (min-width: $tablet-width) {
+        padding: 133px 0 71px 0;
+    }
+
+    @media (min-width: $desktop-width) {
+        display: flex;
+        align-items: center;
+        padding: 0;
+    }
+
+    &__sell-inner-wrapper {
+        height: auto;
+
+        @media (min-width: $desktop-width) {
+            height: 375px;
+            margin-top: 50px;
+        }
+    }
+
+    &__sell {
+        position: absolute;
+        width: 110px;
+        height: 119px;
+        background-image: url("../img/sale.svg");
+        top: -53px;
+        left: calc(50% - 55px);
+
+        @media (min-width: $tablet-width) {
+            top: -20px;
+        }
+
+        &-text {
+            @include font(14px, normal, 700, 1px);
+            color: $white;
+            text-transform: uppercase;
+            margin: 20px 0 0 0;
+
+            @media (min-width: $tablet-width) {
+                margin: 18px 0 0 0;
+            }
+
+            @media (min-width: $desktop-width) {
+                margin: 19px 0 0 0;
+            }
+        }
+
+        &-percent {
+            display: block;
+            @include font(30px, 28px, 700, -0.5px);
+            padding: 10px 0 0 0;
+        }
+
+        &-inner-text {
+            display: block;
+            @include font(15px, 24px, 400, -0.5px);
+            color: $white70;
+            text-transform: lowercase;
+        }
+    }
+
+    &__full {
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 131px;
+            height: 2px;
+            background-color: $purple;
+            top: 48px;
+            left: 68px;
+
+            @media (min-width: $tablet-width) {
+                width: 143px;
+                top: 47px;
+                left: 159px;
+            }
+        }
+    }
+
+    &__full-text {
+        @include font(15px, normal, 400, -0.5px);
+        color: $white40;
+        margin: 0 0 4px 0;
+    }
+
+    &__full-price {
+        display: inline-block;
+        font-family: "RobotoSlab", sans-serif;
+        @include font(38px, normal, 300, -2px);
+        color: $white40;
+        margin: 0;
+    }
+
+    &__installment-plan {
+        margin-top: 17px;
+
+        @media (min-width: $tablet-width) {
+            margin-top: 31px;
+        }
+
+        @media (min-width: $desktop-width) {
+            margin-top: 14px;
+        }
+    }
+
+    &__installment-plan-price {
+        @include font(56px, normal, 400, -2px);
+        color: $white;
+        margin: 0;
+
+        & svg {
+            width: 56px;
+            height: 40px;
+        }
+
+        @media (min-width: $tablet-width) {
+            font-size: 80px;
+
+            & svg {
+                width: 52px;
+                height: 57px;
+            }
+        }
+    }
+
+    &__installment-plan-text {
+        @include font(18px, normal, 400, -0.5px);
+        color: $white;
+        margin: 0;
+        margin-top: -3px;
+
+        @media (min-width: $tablet-width) {
+            font-size: 20px;
+            margin-top: -9px;
+        }
+
+        @media (min-width: $desktop-width) {
+            font-size: 23px;
+        }
+    }
+
+    &__bonus {
+        margin-top: 24px;
+
+        & svg {
+            width: 20px;
+            height: 28px;
+        }
+
+        @media (min-width: $tablet-width) {
+            margin-top: 34px;
+
+            & svg {
+                width: 23px;
+                height: 38px;
+            }
+        }
+    }
+
+    &__bonus-price {
+        font-family: "RobotoSlab", sans-serif;
+        @include font(40px, normal, 300, -2px);
+        color: $white;
+        margin: 0;
+
+        @media (min-width: $tablet-width) {
+            font-size: 50px;
+        }
+    }
+
+    &__bonus-text {
+        @include font(15px, normal, 400, -0.5px);
+        color: $white;
+        margin: 0;
+
+        @media (min-width: $tablet-width) {
+            font-size: 18px;
+        }
+
+        @media (min-width: $desktop-width) {
+            display: none;
+        }
+
+        &--desktop {
+            display: none;
+
+            @media (min-width: $desktop-width) {
+                display: block;
+                @include font(20px, normal, 400, -0.5px);
+                color: $white;
+                margin: 0;
+            }
+        }
+    }
+}

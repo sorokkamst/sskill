@@ -1,0 +1,13 @@
+// global
+@import "global/colors.scss";
+@import "global/fonts.scss";
+@import "global/mixins.scss";
+@import "global/visually-hidden.scss";
+@import "global/viewports.scss";
+@import "global/container.scss";
+
+// pages
+@import "blocks/page.scss";
+@import "blocks/recording.scss";
+@import "blocks/recording-price.scss";
+@import "blocks/recording-info.scss";

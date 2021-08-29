@@ -1,0 +1,287 @@
+.recording-info {
+    padding: 40px 0 55px 0;
+    background-color: $background;
+
+    @media (min-width: $tablet-width) {
+        padding: 69px 0 78px 0;
+        background-color: $white;
+        filter: drop-shadow(0 2px 24px $shadow);
+    }
+
+    @media (min-width: $desktop-width) {
+        padding: 58px 0 57px 0;
+    }
+
+    &__header {
+        @include font(30px, 36px, 700, -0.5px);
+        color: $black;
+        margin: 0 0 26px 0;
+
+        @media (min-width: $tablet-width) {
+            text-align: center;
+            font-size: 38px;
+            line-height: 40px;
+            margin: 0 0 40px 0;
+        }
+
+        @media (min-width: $desktop-width) {
+            text-align: left;
+            font-size: 34px;
+            margin: 0 0 25px 0;
+        }
+    }
+
+    &__phone-list {
+        margin: 0 0 29px 0;
+        padding-left: 0;
+
+        @media (min-width: $tablet-width) {
+            margin: 0 0 53px 0;
+        }
+
+        @media (min-width: $desktop-width) {
+            margin: 0 0 44px 0;
+        }
+    }
+
+    &__phone-item {
+        @include font(15px, 26px, 400, 0.5px);
+        list-style: inside;
+        color: $grey;
+
+        &:not(:first-child) {
+            margin-top: 14px;
+        }
+
+        &::marker {
+            color: $blue;
+            font-size: 16px;
+        }
+    }
+
+    &__date {
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: $tablet-width) {
+            margin: 0 auto;
+            flex-direction: row;
+            justify-content: space-between;
+            align-content: center;
+            width: 346px;
+        }
+
+        @media (min-width: $desktop-width) {
+            margin: 0;
+            width: 370px;
+        }
+    }
+
+    &__date-text {
+        @include font(15px, normal, 400, -0.5px);
+        color: $grey;
+        margin: 0 0 12px 0;
+
+        .format {
+            display: none;
+        }
+
+        @media (min-width: $desktop-width) {
+            & .format {
+                display: inline-block;
+                font-size: 15px;
+                font-weight: 400;
+                color: $grey;
+            }
+        }
+    }
+
+    &__date-start,
+    &__date-slot {
+        @include font(20px, normal, 700, -0.5px);
+        color: $blue;
+    }
+
+    &__date-start {
+        @media (min-width: $desktop-width) {
+            display: none;
+        }
+    }
+
+    &__date-slot {
+        @media (min-width: $tablet-width) {
+            display: none;
+        }
+    }
+
+    &__date-start--desktop,
+    &__date-slot--desktop {
+        display: none;
+
+        @media (min-width: $desktop-width) {
+            display: inline-block;
+            @include font(20px, normal, 700, -0.5px);
+            color: $blue;
+            padding-left: 4px;
+        }
+    }
+
+    &__date-slot--tablet {
+        display: none;
+
+        @media (min-width: $tablet-width) {
+            display: inline-block;
+            @include font(20px, normal, 700, -0.5px);
+            color: $blue;
+        }
+
+        @media (min-width: $desktop-width) {
+            display: none;
+        }
+    }
+
+    &__form {
+        margin-top: 21px;
+
+        @media (min-width: $tablet-width) {
+            margin-top: 16px;
+        }
+
+        @media (min-width: $desktop-width) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__input {
+        position: relative;
+        font-family: "OpenSans", sans-serif;
+        width: 262px;
+        height: 56px;
+        border: 2px solid $grey-border;
+        @include font(15px, 28px, 400, -0.5px);
+        padding-left: 30px;
+
+        @media (min-width: $tablet-width) {
+            width: 429px;
+        }
+
+        @media (min-width: $desktop-width) {
+            width: 334px;
+        }
+
+        &::placeholder {
+            position: absolute;
+            @include font(15px, 28px, 400, -0.5px);
+            left: 30px;
+            top: 15px;
+
+            @media (min-width: $tablet-width) {
+                left: 20px;
+                top: 15px;
+            }
+
+            @media (min-width: $desktop-width) {
+                left: 30px;
+                top: 13px;
+            }
+        }
+
+        &:not(:first-child) {
+            margin-top: 18px;
+
+            @media (min-width: $tablet-width) {
+                margin-top: 19px;
+            }
+        }
+    }
+
+    &__checkbox-label {
+        position: relative;
+        font-family: "OpenSans", sans-serif;
+        display: inline-block;
+        @include font(14px, 21px, 400, -0.5px);
+        color: $grey;
+        padding-left: 43px;
+        margin-top: 20px;
+
+        & .break {
+            display: none;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 20px;
+            height: 20px;
+            border: 2px solid $grey-border;
+            left: 0;
+        }
+
+        @media (min-width: $tablet-width) {
+            line-height: 24px;
+            padding-left: 32px;
+            margin-top: 32px;
+        }
+
+        @media (min-width: $desktop-width) {
+            order: 2;
+            margin-top: 33px;
+            padding-left: 40px;
+            width: 370px;
+            line-height: 21px;
+
+            & .break {
+                display: block;
+            }
+        }
+    }
+
+    &__text-link {
+        text-decoration: none;
+        color: $blue;
+    }
+
+    &__checkbox:checked+.recording-info__checkbox-label::after {
+        position: absolute;
+        content: "";
+        width: 14px;
+        height: 11px;
+        background-image: url("../img/check.svg");
+        left: 5px;
+        top: 7px;
+    }
+
+    &__checkbox:checked+.recording-info__checkbox-label::before {
+        position: absolute;
+        content: "";
+        width: 24px;
+        height: 24px;
+        background-color: $blue;
+        border: 0;
+    }
+
+    &__form-button {
+        display: block;
+    }
+
+    &__form-button {
+        @include font(15px, normal, 600, 1px);
+        text-transform: uppercase;
+        color: $white;
+        width: 100%;
+        height: 70px;
+        border: 0;
+        background-color: $blue;
+        margin-top: 50px;
+
+        @media (min-width: $tablet-width) {
+            margin-top: 28px;
+        }
+
+        @media (min-width: $desktop-width) {
+            width: 370px;
+            margin-top: 16px;
+        }
+    }
+}
